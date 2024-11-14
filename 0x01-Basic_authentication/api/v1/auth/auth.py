@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This is Auth class
+Auth class
 """
 
 from tabnanny import check
@@ -11,12 +11,12 @@ User = TypeVar('User')
 
 class Auth:
     """
-    This class to manages API authentication
+    a class to manage the API authentication
     """
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """
-        This returns False - path and excluded_paths
+        returns False - path and excluded_paths
         """
         check = path
         if path is None or excluded_paths is None or len(excluded_paths) == 0:
@@ -29,7 +29,7 @@ class Auth:
 
     def authorization_header(self, request=None) -> str:
         """
-        This returns None - request
+        returns None - request
         """
         if request is None:
             return None
@@ -37,6 +37,6 @@ class Auth:
 
     def current_user(self, request=None) -> User:
         """
-        This returns None - request
+        returns None - request
         """
         return None
